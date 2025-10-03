@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FloCash Mobile Checkout</title>
+</head>
+<body>
+  <h2>Pay with Mobile (FloCash)</h2>
+
+  <form action="https://sandbox.flocash.com/ecom/ecommerce.do" method="post">
+    <input type="hidden" name="cancel_url" value="https://mercykilonzo.github.io/Flocash/cancel.html" />
+    <input type="hidden" name="return_url" value="https://mercykilonzo.github.io/Flocash/return.html" />
+    <input type="hidden" name="notify_url" value="https://mercykilonzo.github.io/Flocash/notify.html" />
+
+
+    <input type="hidden" name="merchant" value="vietnga210484@yahoo.com" />
+    <input type="hidden" name="merchant_name" value="John" />
+    <input type="hidden" name="order_id" value="MOBILE-123456" />
+    <input type="hidden" name="custom" value="1234567890" />
+    <input type="hidden" name="currency_code" value="KES" />
+    <input type="hidden" name="item_name" value="test" />
+    <input type="hidden" name="item_price" value="100" />
+    <input type="hidden" name="quantity" value="1" />
+    <input type="hidden" name="amount" value="100" />
+
+
+    <input type="hidden" name="pay_method" value="MOBILE" />
+
+    <p>
+      <label>First Name: <input type="text" name="user_firstName" value="John" /></label>
+    </p>
+    <p>
+      <label>Last Name: <input type="text" name="user_lastName" value="Tom" /></label>
+    </p>
+    <p>
+      <label>Email: <input type="email" name="user_email" value="user@test.com" /></label>
+    </p>
+    <p>
+      <label>Mobile (MSISDN): <input type="text" name="user_mobile" value="254700123456" /></label>
+    </p>
+    <p>
+      <label>Country: <input type="text" name="user_country" value="KE" /></label>
+    </p>
+    <p>
+      <label>Address: <input type="text" name="user_address" value="address" /></label>
+    </p>
+    <p>
+      <label>City: <input type="text" name="user_city" value="Nairobi" /></label>
+    </p>
+
+    <p>
+      <button type="submit">Pay with Mobile</button>
+    </p>
+  </form>
+</body>
+</html>
