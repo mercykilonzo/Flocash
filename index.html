@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FloCash Simple Checkout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 20px;
+      padding: 0;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      color: #0073e6;
+      margin-bottom: 30px;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      gap: 10px;
+      min-width: 130px;
+    }
+    input[type="text"],
+    input[type="email"] {
+      flex: 1;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus {
+      border-color: #0073e6;
+      outline: none;
+    }
+    button[type="submit"] {
+      width: 100%;
+      padding: 12px 0;
+      background-color: #0073e6;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button[type="submit"]:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+  <h2>Checkout with FloCash</h2>
+
+  <form action="https://sandbox.flocash.com/ecom/ecommerce.do" method="post">
+      <input type="hidden" name="cancel_url" value="http://127.0.0.1:5500/cancel.html" />
+    <input type="hidden" name="return_url" value="http://127.0.0.1:5500/return.html" />
+    <input type="hidden" name="notify_url" value="http://127.0.0.1:5500/notify.html" />
+
+      <p>
+      <label>
+        Merchant:
+         <input type="text" name="merchant" value="vietnga210484@yahoo.com"  />
+      </label>
+    </p>
+     <p>
+      <label>
+        merchant Name:
+          <input type="text" name="merchant_name" value="John" />
+      </label>
+    </p>
+
+      <p>
+      <label>
+        Order_id:
+          <input type="text" name="order_id" value="12345678" />
+      </label>
+    </p>
+    <p>
+       <label>:
+        Custom
+          <input type="text" name="custom" value="1234567890" />
+      </label>
+    </p>   
+    <p>
+    <label>
+        Currency
+          <input type="text" name="currency_code" value="USD" />
+      </label>
+    </p>   
+    <p>
+    <label>
+        Item_Name
+          <input type="text" name="item_name" value="Merchant Credit" />
+      </label>
+    </p>
+
+     <p>
+    <label>
+        merchant Name:
+         <input type="text" name="item_price" value="100" />
+      </label>
+    </p>
+
+      <p>
+    <label>
+        Quantity:
+          <input type="text" name="quantity" value="1" />
+      </label>
+    </p>
+
+      <p>
+    <label>
+        Amount:
+        <input type="text" name="amount" value="10" />
+      </label>
+    </p>
+
+      <p>
+    <label>
+        Customer_Acc:
+         <input type="text" name="customer_acc" value="customer@test.com" />
+      </label>
+    </p>
+
+    
+   <p>
+      <label>
+        First Name:
+        <input type="text" name="user_firstName" value="John" required />
+      </label>
+    </p>
+    <p>
+      <label>
+        Last Name:
+        <input type="text" name="user_lastName" value="Tom" />
+      </label>
+    </p>
+    <p>
+      <label>
+        Email:
+        <input type="email" name="user_email" value="user@test.com" required />
+      </label>
+    </p>
+    <p>
+      <label>
+        Mobile:
+        <input type="text" name="user_mobile" value="mobile" />
+      </label>
+    </p>
+       <p>
+      <label>
+        Country:
+        <input type="text" name="user_country" value="KE" />
+      </label>
+    </p>
+       <p>
+      <label>
+        Address:
+        <input type="text" name="user_address" value="address" />
+      </label>
+    </p>
+       <p>
+      <label>
+        City:
+        <input type="text" name="user_city" value="city" />
+      </label>
+    </p>
+       <p>
+      <label>
+        State:
+        <input type="text" name="user_state" value="state" />
+      </label>
+    </p>
+
+       <p>
+      <label>
+        Postal Code:
+        <input type="text" name="user_postalCode" value="postalCode" />
+      </label>
+    </p>
+
+    <p>
+      <button type="submit">Pay Now</button>
+    </p>
+  </form>
+</body>
+</html>
